@@ -9,7 +9,7 @@ Usage
 * **Requires Twitter Bootstrap**
 
 * Include the directive in your template as,
-*   e.g. <awesome-error msg="errorMessage"></awesome-error> where, errorMessage is in the scope
+*      <awesome-error msg="errorMessage"></awesome-error> where, errorMessage is in the scope
 * Then, broadcast or emit the message from controllers or directives. e.g.
 *      $scope.$emit('show error');      // to show error msg
 *      $scope.$emit('hide error');      // to hide error msg
