@@ -30,24 +30,14 @@
                   </div>',
          link: function(scope) {
           scope.errorMessage = {
+            "INVALID_EMAIL_OR_PASSWORD" : "Sorry, Invalid Email or Password.",
             "USERNAME_OR_PASSWORD_NOT_CORRECT" : "Sorry, Username or Password is not correct.",
-            "MISSING_PASSWORD" : "Sorry, Missing Password.",
+            "USER_ALREADY_EXISTS" : "Sorry, User already exists.",
+            "MISSING_NICKNAME_PARAMETER" : "Sorry, Missing Nickname",
+            "MISSING_PASSWORD_PARAMETER" : "Sorry, Missing Password.",
             "MISSING_USERNAME" : "Sorry, Missing Username.",
-            "INVALID_USERNAME" : "Sorry, Invalid Username.",
-            "INVALID_PASSWORD" : "Sorry, Invalid Password.",
-            "MISSING_EMAIL" : "Sorry, Missing Email.",
-            "INVALID_EMAIL" : "Sorry, Invalid Email.",
-            "USERNAME_NOT_AVAILABLE" : "Sorry, Username is not available.",
-            "EMAIL_NOT_AVAILABE" : "Sorry, Email is not available",
-            "FILE_NOT_VALID" : "Sorry, File is not valid",
-            "Email_Confirm_Email_Not_Matching" : "Sorry, email and confirm email do not match.",
-            "TAG_NOT_AVAILABLE" : "Sorry, tag not available.",
-            "UPDATE_COMPLETE" : "Success, update complete.",
-            "PASSWORD_UPDATE_COMPLETE" : "Success, password updated.",
-            "file type is not audio/mp3" : "Sorry, file type is not in audio/mp3 format",
-            "Uploading_Error" : "Uploading error",
-            "PASSWORD_MODIFICATION_FAILED" : "Sorry, Password modification failed.",
-            "Undefined" : "Sorry, we encounterned an Unknown problem"
+            "INVALID_EMAIL" : "Sorry, Not a valid Email.",
+            "EMAIL_REQUIRED" : "Sorry, Email required"
           };
         
           scope.$on('show error', function (args) {
