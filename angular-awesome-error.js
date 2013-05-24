@@ -30,17 +30,32 @@
                   </div>',
          link: function(scope) {
           scope.errorMessage = {
-  "INVALID_EMAIL_OR_PASSWORD" : "Sorry, Invalid Email or Password.",
             "USERNAME_OR_PASSWORD_NOT_CORRECT" : "Sorry, Username or Password is not correct.",
-            "USER_ALREADY_EXISTS" : "Sorry, User already exists.",
-            "MISSING_USERNAME_PARAMETER" : "Sorry, Missing Username",
-            "MISSING_PASSWORD_PARAMETER" : "Sorry, Missing Password.",
-            "MISSING_USERNAME" : "Sorry, Missing Username.",
+            "MISSING_USERNAME_OR_EMAIL" : "Missing Username or Email",
+            "INVALID_USERNAME_OR_EMAIL" : "Invalid Username or Email",
+            "MISSING_PASSWORD" : "Missing Passowrd",
+            "INVALID_PASSWORD" : "Invalid Passowrd",
+            "MISSING_GEO" : "Missing Geo",
+            "INVALID_GEO" : "Invalid Geo",
+            "TOKEN_NOT_VALID" : "Token not valid",
+            "FILE_NOT_VALID" : "File not valid",
+            "EMAIL_NOT_AVAILABE" : "Email not available",
+            "MISSING_TOKEN" : "Missing token",
+            "INVALID_TOKEN" : "Token not valid",
+            "TOKEN_NOT_CORRECT" : "Incorrect token",
+            "TOKEN_EXPIRED" : "Your session has expired",
             "INVALID_EMAIL" : "Sorry, Not a valid Email.",
-            "EMAIL_REQUIRED" : "Sorry, Email required",
-            "USERNAME_PATTERN_ERROR" : "Username should contain alphabets and number length between 3-15",
-            "EMAIL_PATTERN_ERROR" : "Not a valid email", 
-            "PASSWORD_LENGTH_ERROR" : "Password length shouble be between 7 and 20",
+            "USERNAME_OR_PASSWORD_OR_TOKEN_NOT_CORRECT" : "Username or password or token is not correct",
+            "MISSING_USERNAME" : "Missing Username",
+            "INVALID_USERNAME" : "Invalid USername",
+            "USERNAME_NOT_AVAILABLE" : "Username not available",
+            "MISSING_EMAIL" : "Missing Email",
+            "USER_NOT_FOUND" : "Sorry, User not found.",
+            "SHOUT_NOT_FOUND" : "Shout not found",
+            "MISSING_SHOUT" : "Missing shout",
+            "INVALID_SHOUT" : "Invalid Shout",
+            "INVALID_IN_REPLY_TO" : "Invalid Reply to ",
+
             "useremail_REQUIRED" : "Email Required",
             "username_REQUIRED" : "Username Required",
             "password_REQUIRED" : "Password Required",
@@ -49,7 +64,8 @@
             "email_INVALID" : "Invalid Email",
             "email_REQUIRED" : "Email Required",
             "password_LENGTH_PATTERN" : "Password length shouble be between 7 and 20",
-            "USERNAME_ALREADY_TAKEN" : "Sorry, Username already taken"          };
+            "USERNAME_ALREADY_TAKEN" : "Sorry, Username already taken"          
+          };
         
           scope.$on('show error', function (args) {
             scope.showerr = true;
