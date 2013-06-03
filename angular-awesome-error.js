@@ -60,10 +60,10 @@
             "username_REQUIRED" : "Username Required",
             "password_REQUIRED" : "Password Required",
             "useremail_INVALID" : "Invalid Email",
-            "username_INVALID_PATTERN" : "Username should contain alphabets and number length between 3-15",
+            "username_INVALID_PATTERN" : "Username should contain alphabets and number length between 1-15",
             "email_INVALID" : "Invalid Email",
             "email_REQUIRED" : "Email Required",
-            "password_LENGTH_PATTERN" : "Password length shouble be between 7 and 20",
+            "password_LENGTH_PATTERN" : "Password should be 3 to 15 characters long",
             "USERNAME_ALREADY_TAKEN" : "Sorry, Username already taken"          
           };
         
