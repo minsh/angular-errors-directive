@@ -39,12 +39,15 @@
             "USERNAME_NOT_AVAILABLE": "This username is already taken!",
             "USERNAME_ALREADY_TAKEN": "This username is already taken!",
             "username_REQUIRED": "Please, enter a username.",
-            "username_INVALID_PATTERN" : "Invalid username! Please, enter alphanumerics only and length between 1-15",
+            "username_INVALID_PATTERN" : "Username should be composed of alphanumerics only and 1 to 15 characters long.",
+            "USERNAME_UPDATED" : "Username successfully updated.",
 
             "MISSING_PASSWORD" : "Please, enter a password.",
             "INVALID_PASSWORD" : "Invalid password.",
             "password_REQUIRED" : "Please, enter a password.",
             "password_LENGTH_PATTERN" : "Password should be 3 to 15 characters long",
+            "PASSWORDS_DONT_MATCH" : "Passwords dont match.",
+            "PASSWORD_UPDATED" : "Password successfully updated.",
 
             "email_INVALID" : "Invalid email.",
             "email_REQUIRED" : "Please, enter an email.",
@@ -52,6 +55,7 @@
             "EMAIL_NOT_AVAILABE" : "This email is already taken!",
             "useremail_REQUIRED" :  "Please, enter an email.",
             "useremail_INVALID" : "Invalid email",
+            "MAIL_SENT_RESET_PASSWORD" : "Email with password reset instructions has been sent to your email address",
 
             "TOKEN_NOT_VALID" : "Oops, something went wrong. Please, try again later.",
             "MISSING_TOKEN" : "Oops, something went wrong. Please, try again later.",
@@ -68,6 +72,9 @@
             "MISSING_SHOUT" : "Please, enter a message.",
             "INVALID_SHOUT" : "Invalid message.",
             "INVALID_IN_REPLY_TO" : "Invalid reply message.",
+            "FEEDBACK_RESPONSE" : "Thank you for your feedback.",
+            "FEEDBACK_ERROR_RESPONSE" : "Sorry the feedback could not be sent.",
+            "FEEDBACK_MISSING" : "Please, enter a feedback.",
           };
         
           scope.$on('show error', function (args) {
