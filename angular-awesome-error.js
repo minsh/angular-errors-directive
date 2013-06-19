@@ -18,16 +18,15 @@
         template: '<div> \
                     <div ng-show="showerr"> \
                       <div class="alert fade in"> \
-                        <button type="button" class="close" ng-click="hideError()">×</button> \
-                          {{showMessage}} \
+                        {{showMessage}} \
                       </div> \
                     </div> \
-                   <div ng-show="showsucc"> \
+                    <div ng-show="showsucc"> \
                       <div class="alert fade in alert-success"> \
                           {{showMessage}} \
                       </div> \
                     </div> \
-                  </div>',
+                   </div>',
          link: function(scope) {
           scope.errorMessage = {
             "USERNAME_OR_PASSWORD_NOT_CORRECT": "Invalid username or password.",
