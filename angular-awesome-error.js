@@ -17,7 +17,7 @@
         },
         template: '<div> \
                     <div ng-show="showerr"> \
-                      <div class="alert fade in"> \
+                      <div class="alert alert-error fade in"> \
                         {{showMessage}} \
                       </div> \
                     </div> \
