@@ -24,5 +24,5 @@ You need to keep all your error messages in a JSON file 'errors_list.json'. e.g.
 }
 ```
 
-Uppercase error messages represent errors comming from server while lowercase error messages represent 
+Uppercase error messages represent errors from server while lowercase error messages represent 
 errors from client side.
