@@ -65,7 +65,11 @@
 
           scope.$watch(function() {return scope.msg}, function(value) {
              scope.showMessage = scope.errorMessage[scope.msg];
-             if (scope.showMessage === "undefined") { scope.showMessage = scope.errorMessage["Undefined"]; }
+             if (scope.showMessage === "") {
+               scope.$apply(function() {
+                 scope.showMessage = scope.errorMessage["Undefined"];
+               });
+             }
           });
         }
       };
