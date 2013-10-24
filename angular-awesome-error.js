@@ -61,6 +61,11 @@
             _showMsg(true, args, target, err);
           });
 
+          scope.$on('hide all', function(args, target) {
+            scope.showerr = false;
+            scope.showsucc = false;
+          });
+
           scope.$on('hide error', function (args, target) {
             _showMsg(false, args, target);
           });
