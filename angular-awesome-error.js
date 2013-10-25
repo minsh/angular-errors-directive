@@ -23,12 +23,12 @@
           target: '='
         },
         template: '<div> \
-                    <div ng-show="showerr"> \
+                    <div ng-show="showErr"> \
                       <div class="alert alert-error fade in"> \
                         {{showMessage}} \
                       </div> \
                     </div> \
-                    <div ng-show="showsucc"> \
+                    <div ng-show="showSucc"> \
                       <div class="alert fade in alert-success"> \
                           {{showMessage}} \
                       </div> \
@@ -36,25 +36,25 @@
                    </div>',
         link: function(scope) {
 
-          scope.messages = {};
+          scope.messageMap = {};
 
           var _showMsg = function(val, args, target, str) {
             if (scope.target === target) {
               if (!str) {
                 str = 'Undefined';
               }
-              scope.showMessage = scope.messages[str];
+              scope.showMessage = scope.messageMap[str];
               if (args.name.indexOf('error') !== -1) {
-                scope.showerr = val;
+                scope.showErr = val;
               } else {
-                scope.showsucc = val;
+                scope.showSucc = val;
               }
             }
           };
 
           /* fetching data present in 'errors-list.json' file */
           list.success(function(data) {
-            scope.messages = data;
+            scope.messageMap = data;
           });
 
           scope.$on('show error', function (args, target, err) {
@@ -62,8 +62,8 @@
           });
 
           scope.$on('hide all', function(args, target) {
-            scope.showerr = false;
-            scope.showsucc = false;
+            scope.showErr = false;
+            scope.showSucc = false;
           });
 
           scope.$on('hide error', function (args, target) {
