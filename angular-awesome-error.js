@@ -40,10 +40,10 @@
 
           var _showMsg = function(val, args, target, str) {
             if (scope.target === target) {
-              scope.showMessage = scope.messages[str];
-              if (scope.showMessage === "") {
-                scope.showMessage = scope.messages["Undefined"];
+              if (!str) {
+                str = 'Undefined';
               }
+              scope.showMessage = scope.messages[str];
               if (args.name.indexOf('error') !== -1) {
                 scope.showerr = val;
               } else {
