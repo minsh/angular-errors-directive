@@ -1,6 +1,6 @@
 {
   "name": "angular-errors-directive",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "main": "angular-awesome-error.js",
   "ignore": [
     "**/.*",
