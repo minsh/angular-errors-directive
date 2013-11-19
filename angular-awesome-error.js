@@ -25,11 +25,13 @@
         template: '<div> \
                     <div ng-show="showErr"> \
                       <div class="alert alert-error fade in"> \
+                        <i class="icon-warning-sign"></i>\
                         {{showMessage}} \
                       </div> \
                     </div> \
                     <div ng-show="showSucc"> \
                       <div class="alert fade in alert-success"> \
+                          <i class="icon-ok-sign"></i>\
                           {{showMessage}} \
                       </div> \
                     </div> \
