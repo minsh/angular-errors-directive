@@ -23,18 +23,12 @@
           target: '='
         },
         template: '<div> \
-                    <div ng-show="showErr"> \
-                      <div class="alert alert-error fade in"> \
-                        <i class="icon-warning-sign"></i>\
-                        {{showMessage}} \
-                      </div> \
-                    </div> \
-                    <div ng-show="showSucc"> \
-                      <div class="alert fade in alert-success"> \
-                          <i class="icon-ok-sign"></i>\
-                          {{showMessage}} \
-                      </div> \
-                    </div> \
+                     <table ng-show="showErr" class="alert alert-error fade in" style="width:100%;"><tr><td> \
+                       <i class="fa fa-warning"></i> {{showMessage}} \
+                     </td></td></table> \
+                     <table ng-show="showSucc" class="alert fade in alert-success" style="width:100%;"><tr><td> \
+                       <i class="fa fa-check-circle"></i> {{showMessage}} \
+                     </td></tr></table> \
                    </div>',
         link: function(scope) {
 
