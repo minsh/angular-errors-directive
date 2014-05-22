@@ -3,28 +3,61 @@ angular-errors-directive
 
 AngularJS user error feedback directive.
 
-Usage
------
+Install
+-------
+**Requires Twitter Bootstrap**
+```bower install angular-errors-directive```
 
-* **Requires Twitter Bootstrap**
+Include
+-------
+Include the directive in your pages as:
+```
+<awesome-error target="'pageName'"></awesome-error>
+```
+where ```pageName``` is a unique id.
 
-* Include the directive in your template as,
-*      <awesome-error target="'settingsPage'"></awesome-error> where, target defines the error directive you are targetting.
-* Then, broadcast or emit the message from controllers or directives. e.g.
-*      $scope.$broadcast(errorState, target, error);                         // template of broadcast
-*      $scope.$broadcast('show error', 'settingsPage', 'INVALID_DATE');      // to show error msg
-*      $scope.$emit('hide error', 'settingsPage');                           // to hide error msg
-*      $scope.$emit('show success', 'settingsPage', 'TWEET_POSTED');         // to show success msg
-*      $scope.$emit('hide success', 'settingsPage');                         // to hide success msg
+Messages
+--------
+You need to keep all your error messages in a JSON file ```errors_list.json```.
 
-You need to keep all your error messages in a JSON file 'errors_list.json'. e.g.
+Add a default error message ```Undefined``` which will be called whenever a key is not found.
+
+Example:
 ```
 {
   "INVALID_DATE" : "Please enter a valid date",
   "username_not_found" : "Sorry, This username is already taken",
-  "TWEET_POSTED": "Tweet was posted successfully"
+  "TWEET_POSTED": "Tweet was posted successfully",
+  "Undefined": "Oops, something went wrong"
 }
 ```
-
-Uppercase error messages represent errors from server while lowercase error messages represent 
+Convention: uppercase error messages represent errors from server while lowercase error messages represent
 errors from client side.
+
+Broadcast a Message
+-------------------
+Broadcast messages as follows:
+```
+$scope.$broadcast(type, target, error);
+```
+where
+* **type** is the type of broadcast (see below),
+* **target** is the unique id used while declaring the directive in your html file,
+* **error** is the error key pointing to an error message value in ```errors_list.json```.
+
+Types of Broadcast
+------------------
+**show error / hide error**
+
+To show and hide an error message. Example:
+```
+$scope.$broadcast('show error', 'settingsPage', 'INVALID_DATE');
+$scope.$emit('hide error', 'settingsPage');
+```
+**show success / hide success**
+
+To show and hide a success message. Example:
+```
+$scope.$emit('show success', 'settingsPage', 'TWEET_POSTED');
+$scope.$emit('hide success', 'settingsPage');
+```
