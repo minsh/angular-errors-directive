@@ -41,7 +41,8 @@
               }
               scope.showMessage = scope.messageMap[str];
               /* Handle case where we are missing an error in errors-list.json. */
-              if (!scope.showMessage) {
+              if (scope.showMessage === undefined) {
+                console.log('Undefined user-feedback message: ' + scope.showMessage);
                 scope.showMessage = scope.messageMap['Undefined'];
               }
               if (args.name.indexOf('error') !== -1) {
