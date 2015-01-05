@@ -1,3 +1,5 @@
+/* jshint -W069 */
+
 /*
  * Template for error/success message,
  * Show/hide error message when required,
@@ -42,7 +44,7 @@
               scope.showMessage = scope.messageMap[str];
               /* Handle case where we are missing an error in errors-list.json. */
               if (scope.showMessage === undefined) {
-                console.log('Undefined user-feedback message: ' + scope.showMessage);
+                console.log('User-feedback message not defined: ' + str);
                 scope.showMessage = scope.messageMap['Undefined'];
               }
               if (args.name.indexOf('error') !== -1) {
